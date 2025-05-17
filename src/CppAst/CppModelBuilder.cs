@@ -1164,7 +1164,7 @@ namespace CppAst
                     expr = new CppRawExpression(CppExpressionKind.ObjCSelf);
                     AppendTokensToExpression(cursor, expr);
                     break;
-                case CXCursorKind.CXCursor_OMPArraySectionExpr:
+                case CXCursorKind.CXCursor_ArraySectionExpr:
                     expr = new CppRawExpression(CppExpressionKind.OMPArraySection);
                     AppendTokensToExpression(cursor, expr);
                     break;
