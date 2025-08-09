@@ -284,6 +284,8 @@ namespace CppAst
             if (cursor.IsDefinition && !cppStruct.IsDefinition)
             {
                 ParseAttributes(cursor, cppStruct, false);
+                TryToConvertAttributesToMetaAttributes(cppStruct);
+                AssignSourceSpan(cursor, cppStruct);
                 cppStruct.IsDefinition = true;
                 cppStruct.SizeOf = (int)cursor.Type.SizeOf;
                 cppStruct.AlignOf = (int)cursor.Type.AlignOf;
