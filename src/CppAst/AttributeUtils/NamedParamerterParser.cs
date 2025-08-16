@@ -175,6 +175,8 @@ namespace CppAst
                 term.DefaultIntTypes = new TypeCode[] { TypeCode.Int32 };
                 term.DefaultFloatType = TypeCode.Double; // it is default
                                                          ////term.AddPrefix("0x", NumberOptions.Hex);
+                term.AddSuffix("f", TypeCode.Single);
+                term.AddSuffix("F", TypeCode.Single);
 
                 return term;
             }
